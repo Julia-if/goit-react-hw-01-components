@@ -1,0 +1,15 @@
+.transaction_history {
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    width: 600px;
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+}
