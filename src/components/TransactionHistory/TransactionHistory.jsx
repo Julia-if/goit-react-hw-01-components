@@ -35,4 +35,3 @@ TransactionHistory.protoTypes ={
     })
 }
 
-// export default TransactionHistory;
