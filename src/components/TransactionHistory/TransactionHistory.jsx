@@ -1,5 +1,6 @@
-import s from './TransactionHistory.module.css'
 import PropTypes from 'prop-types';
+import s from './TransactionHistory.module.css'
+
 
 export const TransactionHistory = ({items})=>{
     return (
@@ -27,7 +28,8 @@ export const TransactionHistory = ({items})=>{
 
     )
 }
-TransactionHistory.protoTypes ={
+
+TransactionHistory.propTypes ={
     items: PropTypes.shape({
         type: PropTypes.string,
         amount: PropTypes.number,

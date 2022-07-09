@@ -1,6 +1,12 @@
-import s from './Profile.module.css'
 import PropTypes from 'prop-types';
-export const Profile = ({avatar, username, tag, location, followers, views, likes}) => {return (
+import s from './Profile.module.css'
+
+export const Profile = ({avatar,
+  username,
+  tag,
+  location,
+  stats}) => 
+  {return (
 <div className={s.profile}>   
 <div> 
     <img className={s.img} src = {avatar} alt={username} ></img>
@@ -8,20 +14,18 @@ export const Profile = ({avatar, username, tag, location, followers, views, like
    <p className={s.tag}>@{tag}</p>
    <p className={s.location}>{location}</p>
    <div className={s.stats}>
-   <p className={s.list_item}>Followers: {followers}</p>
-   <p className={s.list_item}>Views: {views}</p>
-   <p className={s.list_item}>Likes:{likes}</p>
+   <p className={s.list_item}>Followers: {stats.followers}</p>
+   <p className={s.list_item}>Views: {stats.views}</p>
+   <p className={s.list_item}>Likes:{stats.likes}</p>
    </div>
    </div>
    </div>
     )}
-Profile.prototype={
+
+Profile.propTypes={
     avatar: PropTypes.string,
     username: PropTypes.string,
     tag: PropTypes.string,
     location: PropTypes.string,
-    followers: PropTypes.number,
-    likes: PropTypes.number,
-    views: PropTypes.number,
+    stats:  PropTypes.arrayOf(PropTypes.number)
 }
-    // export default Profile;
